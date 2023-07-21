@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2? family= Passion+One:wght@400;700;900 & display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family= Sriracha & display=swap');/*importando as fontes do goglle fonts*/
+
+:root {
+    /* o root serve para criar variaveis para cada font, dando nomes para elas*/
+    --font1: Verdana, Geneva, Tahoma, sans-serif;
+    --font2: 'Passion One', cursive;
+    --font3:  'Sriracha', cursive;
+}
+
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+html, body{
+    min-height: 100vh; /*quer dizer que a altura minima vai ser de 100% da vielport, ou seja ,da tela. */
+    background-color: darkgray;
+    font-family: var(--font1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center; /*serve para centralizar o texto*/
+}
+
+header > h1{
+    padding-top: 50px; /*calcular a distancia das letra com a parte de cima */
+    font-variant: small-caps; /*transforma a primeira letra da palavra em maiusculo */
+    font-family:var(--font2);
+    font-size: 4em; /*é uma maneira de as letras se adaptar ao tamanho da tela e colorcar o tamanho das letras em relação a tela com o vw */
+}
+header > p{
+    padding-bottom: 50px;
+}
+a{
+    color: white;
+    text-decoration: none; /*serve para tirar o sublinhado */
+    font-weight: bolder; /*trasforma em negrito*/
+}
+
+a:hover{
+    text-decoration: underline; /*quando passar o mouse vai fiicar sublinhado*/
+}
+section{
+    padding-top: 10vh; /*vai dar um  espaço de 10% da tela para a parte de cima de cada section*/
+    padding-bottom: 10vh; /*vai dar um  espaço de 10% da tela para a parte de baixo de cada section*/
+    line-height: 2em; /*serve para mexer com os espaçamentos entre as frases, as linhas*/
+    padding-left:30px; /*vai dar uma espaço de 30px na parte esquerda de cada section*/
+    font-family: var(--font3);
+    font-size: 2em;
+}
+
+
+section >p{
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem{
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.751);/*serve para fazer uma sombra interna na caixa*/
+    background-attachment: fixed;/* serve para fixar a imagem de fundo, dando um efeito paralax*/
+}
+
+section.imagem > p{
+    width: 400px; /*serve para mudar a largura do paragrafo*/
+    background-color: rgba(0, 0, 0, 0.732);
+    text-shadow: 2px 2px 0px black;
+}
+
+section#img01{
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img02{
+    background-image: url('../imagens/background002.jpg');
+    background-size: cover; /*serve para deixar a imagem de fundo mais adaptada*/
+}
+
+ footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+ }
